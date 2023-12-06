@@ -2,11 +2,15 @@
     border: none;
     border-radius: 5px;
     background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .square:focus{
     border: 5px;
     border-radius: 5px;
+    background-color: rgb(179, 233, 92);
     
 }
 

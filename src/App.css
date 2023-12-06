@@ -1,6 +1,25 @@
+.header{
 
+    font-size: larger;
+}
+
+.warning{
+    font-size: 10px;
+    overflow: hidden; 
+    white-space: nowrap;
+    animation: warning 10s linear infinite
+}
+
+.warning:hover {
+    animation-play-state: paused;
+}
+@keyframes warning {
+    from { text-indent: 100%; }
+    to { text-indent: -100%; }
+}
 
 .table{
+    font-size: 30px;
     gap: 5px;
     display: grid;
     grid-template-columns: 180px repeat(2, 210px) 180px;
@@ -47,6 +66,27 @@
     gap: 15px;
 }
 
+.table img{
+    animation: dice-in-fiel 2s infinite;
+  }
+  @keyframes  dice-in-fiel{
+    0% {
+        transform: rotate(0deg) scale3d(1.5, 1.5, 1.5);
+        
+    }
+    50%{
+        transform: rotate(180deg) scale3d(0.7, 0.7, 0.7)
+    }
+    900%{
+        transform: rotate(270deg) scale3d(0.9, 0.9, 0.9)
+    }
+    100% {
+        transform: rotate(360deg) scale3d(1, 1, 1);
+    
+    }
+  }
+  
+
 
 .roll-button{
     background-color: blue;
@@ -55,9 +95,16 @@
     border: none;
     height: 120px;
     width: 350px;
-    
-    
 }
+.roll-button:active {
+  transform: scale(0.96);
+  
+}
+.roll-button:focus{
+    animation-play-state: dice-in-fiel running;
+}
+
+
 
 .row-square{
     gap: 1px;

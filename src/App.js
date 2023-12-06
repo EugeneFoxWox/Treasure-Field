@@ -26,7 +26,7 @@ function App() {
 
     setButtonTitle(titles[randomTitle]);
 
-    setScore(score + randomFaceCubeOne + randomFaceCubeTwo);
+    setScore(score + randomFaceCubeOne + randomFaceCubeTwo); 
     
   }
 
@@ -40,15 +40,23 @@ function App() {
         <div className='score'>
            На вашем счету: {score} женямов
         </div>
+        <div className='warning'>Мы не несем ответственности за то,что
+         это вас могло оскорбить или наоборот -
+          влюбить в женямов и тратить своё время
+           на фарме женямов в нашем поле сокровищ!
+        </div>
       </header>
+      <div className='rules'>
+
+      </div>
       <div className='table'>
-        <Square/>
-        <Square/>
-        <Square/>
-        <Square />
+        <Square key={1} val="СТАРТ"/>
+        <Square val="-100"/>
+        <Square val="БОНУС"/>
+        <Square val="ОТПУСК"/>
         <div className='row-square top-row'>
-          <Square/>
-          <Square/>
+          <Square key={2}/>
+          <Square key={3}/>
           <Square/>
           <Square/>
         </div>
@@ -78,8 +86,10 @@ function App() {
           </div>
           <button className='roll-button' onClick={handleClickButton}>{buttonTitle}</button>
         </div>
-        
-        
+ 
+      </div>
+      <div>
+
       </div>
       
     </div>
