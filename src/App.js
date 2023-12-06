@@ -12,6 +12,7 @@ function App() {
 
   const [cubeOne, setCubeOne] = useState(7);
   const [cubeTwo, setCubeTwo] = useState(8);
+  const [score, setScore ] = useState(0);
 
 
   const handleClickButton = function(){
@@ -25,6 +26,8 @@ function App() {
 
     setButtonTitle(titles[randomTitle]);
 
+    setScore(score + randomFaceCubeOne + randomFaceCubeTwo);
+    
   }
 
   
@@ -34,6 +37,9 @@ function App() {
     <div className="App">
       <header className="header">
         <h1>ПОЛЕ СОКРОВИЩ</h1>
+        <div className='score'>
+           На вашем счету: {score} женямов
+        </div>
       </header>
       <div className='table'>
         <Square/>
@@ -75,9 +81,7 @@ function App() {
         
         
       </div>
-      <div className='score'>
-        На вашем счету: ... женямов
-      </div>
+      
     </div>
   );
 }
