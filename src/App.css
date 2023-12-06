@@ -1,31 +1,96 @@
 
 
 .table{
-    gap: 10px;
+    gap: 5px;
     display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(4, 200px) ;
+    grid-template-columns: 180px repeat(2, 210px) 180px;
+    grid-template-rows: repeat(4, 180px);
+    background-color: rgb(27, 27, 63);
+    border-radius: 10px;
+    border: 10px solid rgb(250, 168, 14);
 }
 
-.start-cube-1{
-    display: grid;
-    grid-column: 2;
-    grid-row: 2;
+.start-square{
+    grid-row: 1;
+    grid-column: 1;
 }
 
-.start-cube-2{
-    display: grid;
-    grid-column: 3;
-    grid-row: 2;
+.t-r-square{
+    grid-row: 1;
+    grid-column: 4;
 }
+
+.bonus-square{
+    grid-row: 4;
+    grid-column: 4;
+}
+
+.b-l-square{
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.center-field{
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cubes{
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
 
 .roll-button{
     background-color: blue;
     color: rgb(246, 251, 255);
     border-radius: 10px;
     border: none;
-    height: 150px;
-    grid-column: 2 / span 2;
-    grid-row: 3;
+    height: 120px;
+    width: 350px;
     
+    
+}
+
+.row-square{
+    gap: 1px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.column-square{
+    gap: 1px;
+    display: grid;
+    grid-template-rows: repeat(4, 25%);
+}
+
+.top-row{
+    grid-column: 2/ span 2;
+    grid-row: 1;
+}
+
+.bot-row{
+    grid-column: 2/ span 2;
+    grid-row: 4;
+}
+
+.l-column{
+    grid-row: 2/ span 2;
+    grid-column: 1;
+}
+
+.r-column{
+    grid-row: 2/ span 2;
+    columns: 4;
+}
+
+.table .div{
+    background-color: var(--red);
 }
