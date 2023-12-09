@@ -1,6 +1,9 @@
-function Square({id, val}){
+function Square({id, color, val}){
     return(
-        <div className='square'>{val}</div>
+        <div className='square'>
+            <div>{color}</div>
+            <div>{val}</div>
+        </div>
     )
 
 }

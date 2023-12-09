@@ -14,6 +14,7 @@ function App() {
   const [cubeTwo, setCubeTwo] = useState(8);
   const [score, setScore ] = useState(0);
 
+  const [isActive, setAnimate] = useState(false);
 
   const handleClickButton = function(){
     const randomFaceCubeOne = getRandomNumber(1, 6);
@@ -27,6 +28,10 @@ function App() {
     setButtonTitle(titles[randomTitle]);
 
     setScore(score + randomFaceCubeOne + randomFaceCubeTwo); 
+
+    setAnimate(!isActive);
+    console.log(isActive);   
+  
     
   }
 
@@ -46,50 +51,58 @@ function App() {
            на фарме женямов в нашем поле сокровищ!
         </div>
       </header>
-      <div className='rules'>
-
-      </div>
-      <div className='table'>
-        <Square key={1} val="СТАРТ"/>
-        <Square val="-100"/>
-        <Square val="БОНУС"/>
-        <Square val="ОТПУСК"/>
-        <div className='row-square top-row'>
-          <Square key={2}/>
-          <Square key={3}/>
-          <Square/>
-          <Square/>
+      <div className='container'> 
+        <div className='rules'>
+          <h2>Правила игры:</h2>
+          <li>Бросайте кубик</li>
+          <li>Бросайте кубик</li>
+          <li>Бросайте кубик</li>
+          <li>Бросайте кубик</li>
+          <li>Бросайте кубик</li>
+          <li>Бросайте кубик</li>
         </div>
-        <div className='row-square bot-row'>
-          <Square/>
-          <Square/>
-          <Square/>
-          <Square/>
-        </div>
-        <div className='column-square l-column'>
-          <Square/>
-          <Square/>
-          <Square/>
-          <Square/>
-        </div>
-        <div className='column-square r-column'>
-          <Square/>
-          <Square/>
-          <Square/>
-          <Square/>
-        </div>
-
-        <div className='center-field'>
-          <div className='cubes'>
-            <Dice className='cubeOne dice-in-field' faceNumber={cubeOne}></Dice>
-            <Dice className='cubeTwo dice-in-field' faceNumber={cubeTwo}></Dice>
+        <div className='table'>
+          <Square key={1} val="СТАРТ"/>
+          <Square val="-100"/>
+          <Square val="БОНУС"/>
+          <Square val="ОТПУСК"/>
+          <div className='row-square top-row'>
+            <Square key={2}/>
+            <Square key={3}/>
+            <Square/>
+            <Square/>
           </div>
-          <button className='roll-button' onClick={handleClickButton}>{buttonTitle}</button>
-        </div>
- 
-      </div>
-      <div>
+          <div className='row-square bot-row'>
+            <Square/>
+            <Square/>
+            <Square/>
+            <Square/>
+          </div>
+          <div className='column-square l-column'>
+            <Square/>
+            <Square/>
+            <Square/>
+            <Square/>
+          </div>
+          <div className='column-square r-column'>
+            <Square/>
+            <Square/>
+            <Square/>
+            <Square/>
+          </div>
 
+          <div className='center-field'>
+            <div className={isActive ? 'cubes animate' : "cubes"}>
+              <Dice className='dice_in_field' faceNumber={cubeOne}></Dice>
+              <Dice className='dice_in_field' faceNumber={cubeTwo}></Dice>
+            </div>
+            <button className='roll-button' onClick={handleClickButton}>{buttonTitle}</button>
+          </div>
+  
+        </div>
+        <div className='event-box'>
+          
+        </div>
       </div>
       
     </div>
