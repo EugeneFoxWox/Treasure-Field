@@ -7,8 +7,12 @@ import Square  from './components/square/Square';
 import './styles/variables.css';
 import './components/square/Square.css';
 
+
+import Modal from './components/modal/Modal';
+
 function App() {
   const [buttonTitle, setButtonTitle] = useState("СТАРТУЙ!");
+  const [ modalIsOpen, setModalIsOpen ] = useState(false);
 
   const [cubeOne, setCubeOne] = useState(7);
   const [cubeTwo, setCubeTwo] = useState(8);
@@ -16,7 +20,14 @@ function App() {
 
   const [isActive, setAnimate] = useState(false);
 
-  const handleClickButton = function(){
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setAnimate(!isActive);
+  };
+  
+
+  const handleClickButton = async function(){
+    
     const randomFaceCubeOne = getRandomNumber(1, 6);
     const randomFaceCubeTwo = getRandomNumber(1, 7);
 
@@ -24,18 +35,26 @@ function App() {
 
     setCubeOne(randomFaceCubeOne);
     setCubeTwo(randomFaceCubeTwo);
+    setAnimate(!isActive);
 
     setButtonTitle(titles[randomTitle]);
 
-    setScore(score + randomFaceCubeOne + randomFaceCubeTwo); 
+    setScore(score + randomFaceCubeOne + randomFaceCubeTwo);
+    
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        setModalIsOpen(true); 
+      }, 1500)
+    });
+  
+    await promise;
+    
 
-    setAnimate(!isActive);
-    console.log(isActive);   
+     
   
     
   }
 
-  
 
 
   return (
@@ -51,6 +70,7 @@ function App() {
            на фарме женямов в нашем поле сокровищ!
         </div>
       </header>
+      <Modal isOpen={modalIsOpen} closeModal={closeModal}></Modal> 
       <div className='container'> 
         <div className='rules'>
           <h2>Правила игры:</h2>

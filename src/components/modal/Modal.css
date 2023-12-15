@@ -1,0 +1,26 @@
+.modal{
+    position: fixed;
+    height: 500px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 200px;
+    margin-top: 100px;
+    background-color: azure;
+    border-radius: 5px;
+
+}
+
+.text-modal{
+    height: 400px;
+    width: 400px;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px solid rgba(34, 0, 227, 0.323);
+    width: 100%;
+}
