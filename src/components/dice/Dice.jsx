@@ -1,11 +1,11 @@
-import face1 from '../../img/face1.svg'
-import face2 from '../../img/face2.svg'
-import face3 from '../../img/face3.svg'
-import face4 from '../../img/face4.svg'
-import face5 from '../../img/face5.svg'
-import face6 from '../../img/face6.svg'
-import gift from '../../img/gift.svg'
-import star from '../../img/star.svg'
+import face1 from '../../img/dices/face1.svg'
+import face2 from '../../img/dices/face2.svg'
+import face3 from '../../img/dices/face3.svg'
+import face4 from '../../img/dices/face4.svg'
+import face5 from '../../img/dices/face5.svg'
+import face6 from '../../img/dices/face6.svg'
+import gift from '../../img/dices/gift.svg'
+import star from '../../img/dices/star.svg'
 
 function Dice({id, faceNumber}){
     switch (faceNumber) {
