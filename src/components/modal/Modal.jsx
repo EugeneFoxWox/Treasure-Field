@@ -6,7 +6,7 @@ function Modal({isOpen, closeModal, number}){
     if(isOpen){
         return(
             <div className='modal'>
-                <header>
+                <header className='header'>
                     <h2>Вы получили!</h2>
                 </header>
                 <div className='text-modal'>

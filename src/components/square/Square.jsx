@@ -1,8 +1,13 @@
-function Square({id, color, val}){
-    return(
-        <div className='square'>
-            <div>{color}</div>
-            <div>{val}</div>
+import "./Square.css";
+
+function Square({ poz, color, val, pin }) {
+    const classes = ["square", color + '-square', poz + '-square'];
+
+    return (
+        <div className={classes.join(" ")}>
+            <div className="value">{val}</div>
+            <div className="pin">{pin}</div>
+            
         </div>
     )
 

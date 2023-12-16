@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { titles } from './constants/titles';
 import Square  from './components/square/Square';
 import './styles/variables.css';
-import './components/square/Square.css';
 
 
 import Modal from './components/modal/Modal';
@@ -82,33 +81,41 @@ function App() {
           <li>Бросайте кубик</li>
         </div>
         <div className='table'>
-          <Square key={1} val="СТАРТ"/>
-          <Square val="-100"/>
-          <Square val="БОНУС"/>
-          <Square val="ОТПУСК"/>
+          <Square poz={"top"} val="СТАРТ" color={"white"}/>
+          <Square poz={"top"} val="БАЙТ" color={"red"}/>
+          <Square poz={"bot"} val="БОНУС" color={"yellow"}/>
+          <Square poz={"bot"} val="ОТПУСК" color={"yellow"}/>
           <div className='row-square top-row'>
-            <Square key={2}/>
-            <Square key={3}/>
-            <Square/>
-            <Square/>
+            <Square poz={"top"} val="100" color={"yellow"}/>
+            <Square poz={"top"} val="200" color={"green"}/>
+            <Square poz={"top"} val="-50" color={"red"}/>
+            <Square poz={"top"} val="50" color={"blue"}/>
+            <Square poz={"top"} val="-100" color={"red"}/>
+            <Square poz={"top"} val="50" color={"blue"}/>
           </div>
           <div className='row-square bot-row'>
-            <Square/>
-            <Square/>
-            <Square/>
-            <Square/>
+            <Square poz={"bot"} val="100" color={"blue"}/>
+            <Square poz={"bot"} val="600" color={"white"}/>
+            <Square poz={"bot"} val="300" color={"green"}/>
+            <Square poz={"bot"} val="200" color={"green"}/>
+            <Square poz={"bot"} val="-100" color={"red"}/>
+            <Square poz={"bot"} val="100" color={"green"}/>
           </div>
           <div className='column-square l-column'>
-            <Square/>
-            <Square/>
-            <Square/>
-            <Square/>
+            <Square poz={"left"} val="100" color={"blue"}/>
+            <Square poz={"left"} val="100" color={"green"}/>
+            <Square poz={"left"} val="-100" color={"red"}/>
+            <Square poz={"left"} val="200" color={"blue"}/>
+            <Square poz={"left"} val="-50" color={"red"}/>
+            <Square poz={"left"} val="300" color={"green"}/>
           </div>
           <div className='column-square r-column'>
-            <Square/>
-            <Square/>
-            <Square/>
-            <Square/>
+            <Square poz={"right"} val="200" color={"green"}/>
+            <Square poz={"right"} val="600" color={"white"}/>
+            <Square poz={"right"} val="500" color={"yellow"}/>
+            <Square poz={"right"} val="100" color={"blue"}/>
+            <Square poz={"right"} val="200-" color={"red"}/>
+            <Square poz={"right"} val="100" color={"green"}/>
           </div>
 
           <div className='center-field'>
@@ -121,7 +128,10 @@ function App() {
   
         </div>
         <div className='event-box'>
-          
+            <div>удвиительно</div>
+            <div className='profil'>
+              
+            </div>
         </div>
       </div>
       

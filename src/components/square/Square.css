@@ -1,10 +1,14 @@
 .square{
     border: none;
     border-radius: 5px;
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
+
+}
+
+.square .value{
+    background-color: rgba(8, 9, 9, 0.879);
+    color: white;
+    
 }
 
 .square:focus{
@@ -14,4 +18,71 @@
     
 }
 
+.white-square{
+    background-color: var(--white);
+}
+
+.yellow-square{
+    background-color: var(--yellow);
+}
+
+.red-square{
+    background-color: var(--red);
+}
+
+.green-square{
+    background-color: var(--green);
+}
+
+.blue-square{
+    background-color: var(--blue);
+}
+
+.top-square{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-square .value{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.left-square{
+    display: flex;
+    direction: ltr;
+    
+}
+
+.left-square .value{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.right-square{
+    display: flex;
+    direction: rtl;
+}
+
+.right-square .value{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.bot-square{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.bot-square .value{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
