@@ -1,0 +1,42 @@
+.profil{
+    height: 100%;
+    width: 400px;
+    background-color: aquamarine;
+    padding: 5px;
+    
+}
+
+.notecase{
+    width: 100%;
+    height: 250px;
+    padding: 30px 10px;
+    border-radius: 3px;
+    background: url("/src/img/notecase.jpg");
+}
+
+
+
+
+.card{
+    font-size:xx-large;
+    font-weight:700;
+    position: relative;
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+    background: linear-gradient(360deg, rgb(188, 81, 15) 11%, rgb(214, 171, 14) 37%, rgb(255, 174, 0) 80%);
+    border-radius: 5px;
+    
+}
+
+
+.card:hover{
+    top: -10px ;
+    transition: top 2s ease-out;
+}
+
+.photo img{
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+}

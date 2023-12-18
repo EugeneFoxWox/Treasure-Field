@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { titles } from './constants/titles';
 import Square  from './components/square/Square';
 import './styles/variables.css';
+import Profil from './components/profil/Profil';
 
 
 import Modal from './components/modal/Modal';
@@ -47,11 +48,7 @@ function App() {
     });
   
     await promise;
-    
-
-     
-  
-    
+ 
   }
 
 
@@ -128,10 +125,7 @@ function App() {
   
         </div>
         <div className='event-box'>
-            <div>удвиительно</div>
-            <div className='profil'>
-              
-            </div>
+            <Profil></Profil>
         </div>
       </div>
       
