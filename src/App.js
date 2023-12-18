@@ -13,13 +13,10 @@ import Modal from './components/modal/Modal';
 function App() {
   const [buttonTitle, setButtonTitle] = useState("СТАРТУЙ!");
   const [ modalIsOpen, setModalIsOpen ] = useState(false);
-
   const [cubeOne, setCubeOne] = useState(7);
   const [cubeTwo, setCubeTwo] = useState(8);
   const [score, setScore ] = useState(0);
-
   const [isActive, setAnimate] = useState(false);
-
   const closeModal = () => {
     setModalIsOpen(false);
     setAnimate(!isActive);
@@ -71,7 +68,7 @@ function App() {
         <div className='rules'>
           <h2>Правила игры:</h2>
           <li>Бросайте кубик</li>
-          <li>Бросайте кубик</li>
+          <li>Денис не бросает</li>
           <li>Бросайте кубик</li>
           <li>Бросайте кубик</li>
           <li>Бросайте кубик</li>
@@ -111,7 +108,7 @@ function App() {
             <Square poz={"right"} val="600" color={"white"}/>
             <Square poz={"right"} val="500" color={"yellow"}/>
             <Square poz={"right"} val="100" color={"blue"}/>
-            <Square poz={"right"} val="200-" color={"red"}/>
+            <Square poz={"right"} val="-200" color={"red"}/>
             <Square poz={"right"} val="100" color={"green"}/>
           </div>
 
