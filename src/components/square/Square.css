@@ -80,6 +80,7 @@
 .bot-square{
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
 }
 
 .bot-square .value{
@@ -88,3 +89,15 @@
     justify-content: center;
 }
 
+.true-square .chip{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+ .square img{
+    width: 60px;
+    height: 60px;
+
+}

@@ -3,8 +3,8 @@ import './Profil.css';
 import flymoneypng from "../../img/pins/flymoneypng.png"
 
 
-function Profil(){
-    const [wallet, setWallet] = useState(0);
+function Profil({wallet}){
+    
 
 
     return(

@@ -22,7 +22,7 @@ function Dice({id, faceNumber}){
             return(<img src={face4} alt=""/>);
         
         case 5: 
-            return(<img className='Dice' src={face5} alt=""/>);
+            return(<img src={face5} alt=""/>);
 
         case 6: 
             return(<img src={face6} alt=""/>);     
